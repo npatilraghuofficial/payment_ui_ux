@@ -13,6 +13,7 @@
     "axios": "^1.4.0",
     "cors": "^2.8.5",
     "react": "^18.2.0",
+    "react-credit-cards": "^0.8.3",
     "react-dom": "^18.2.0",
     "react-payment-cards": "^1.2.0",
     "react-router": "^6.15.0",

@@ -1,0 +1,32 @@
+/* CreditCardInput.css */
+
+.credit-card-input {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .credit-card-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    font-size: 16px;
+    color: #000;
+    overflow: hidden;
+  }
+  
+  .credit-card-mask:before {
+    content: "**** **** **** ";
+  }
+  
+  .credit-card-input input {
+    padding-left: 100px; /* Adjust this value to your design */
+    /* Other input styling */
+  }
+  

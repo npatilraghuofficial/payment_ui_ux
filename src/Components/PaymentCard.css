@@ -1,0 +1,153 @@
+/* PaymentCard.css */
+
+@keyframes scroll{
+  
+  0% {
+    transform: perspective(1700px) rotateX(0) translateY(0);
+  }
+  5% {
+    transform: perspective(700px) rotateX(3deg) translateY(10%);
+  }
+  10% {
+    transform: perspective(1300px) rotateX(6deg) translateY(20%);
+  }
+  15% {
+    transform: perspective(500px) rotateX(9deg) translateY(30%);
+  }
+  20% {
+    transform: perspective(400px) rotateX(12deg) translateY(40%);
+  }
+  25% {
+    transform: perspective(200px) rotateX(100deg) translateY(50%);
+  }
+ 
+
+
+ 
+
+}
+
+
+/* @keyframes scroll-delayed {
+  5% {
+    transform: perspective(2000px) rotateX(0) translateY(0);
+  }
+  10% {
+    transform: perspective(1500px) rotateX(5deg) translateY(00%);
+  }
+  15% {
+    transform: perspective(1000px) rotateX(5deg) translateY(00%);
+  }
+  20% {
+    transform: perspective(500px) rotateX(5deg) translateY(00%);
+  }
+  25% {
+    transform: perspective(250px) rotateX(5deg) translateY(00%);
+  }
+  30% {
+    transform: perspective(200px) rotateX(5deg) translateY(00%);
+  }
+  35% {
+    transform: perspective(150px) rotateX(5deg) translateY(00%);
+  }
+  40% {
+    transform: perspective(100px) rotateX(5deg) translateY(00%);
+  }
+  45% {
+    transform: perspective(80px) rotateX(5deg) translateY(00%);
+  }
+  50% {
+    transform: perspective(70px) rotateX(5deg) translateY(00%);
+  }
+  60% {
+    transform: perspective(3000px) rotateX(5deg) translateY(00%);
+  }
+  70% {
+    transform: perspective(3000px) rotateX(5deg) translateY(00%);
+  }
+
+  
+  
+
+} */
+
+
+
+/* ... Your existing keyframes and styles ... */
+
+
+
+/* ... Rest of your existing CSS ... */
+
+
+
+
+
+
+
+
+.App {
+  text-align: center;
+  margin-top: 1cm; /* Adjust the margin as needed */
+}
+
+.card-container {
+  height: 30px; /* Set the desired height for the card container */
+  overflow-x: hidden; /* Hide horizontal overflow */
+  overflow-y: hidden; /* Hide vertical overflow */
+  perspective: 200px; /* Adjust the perspective value for 3D effect */
+}
+
+.card-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center; 
+  gap: -20cm; /* Negative gap for card overlapping */
+  margin-top: -30px;
+  /* perspective: 1000px; Adjust the perspective value for 3D effect */
+  /* animation: scroll_ 10s ease-in infinite; Inherit animation delay */
+  transform: perspective(300px) rotateX(6deg) translateY(20%);
+
+
+}
+
+.card-item {
+  position: relative;
+  margin-bottom: -20px;
+  /* animation: scroll_ 1s infinite   ; */
+  padding: 70px;
+  margin-top: -10px;
+ }
+
+.card-item {
+  position: relative;
+  margin-left: -1cm; /* Adjust the negative margin to control overlap */
+  transition: 1s ease-out;
+  margin-bottom: -270px;
+  transform-style: preserve-3d; /* Enable 3D transforms for card stacking */
+  /* animation: scroll-delayed scrol_ 5s ease-in infinite; Inherit animation delay */
+}
+.card-item:hover {
+  transform: scale(1.1) translateY(-20px); /* Add translateY to lift the hovered card */
+  z-index: 100;
+  block-size: 100%;
+  padding: 100px;
+  transform-style: preserve-3d;
+  position: inherit;
+  margin-top:0px; 
+  margin-bottom: -20px;
+  transform: perspective(200px) rotateX(3deg) translateY(30%);
+  /* animation: scroll-delayed scroll_ 1s ease-out  ; */
+}
+
+
+
+.card-number-mask {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ 
+}

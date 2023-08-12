@@ -3,37 +3,82 @@
     {
       "id": 1,
       "cardholderName": "John Doe",
-      "cardNumber": "**** **** **** 1234",
+      "cardNumber": "5555 1111 1111 1234",
       "expiryDate": "12/25",
-      "cvv": "123"
+      "cvv": "123",
+      "cardBgColor": "blood"
     },
     {
       "id": 2,
       "cardholderName": "Jane Smith",
-      "cardNumber": "**** **** **** 5678",
+      "cardNumber": "4017 **** **** 5678",
       "expiryDate": "03/27",
-      "cvv": "456"
+      "cvv": "456",
+      "cardBgColor": "pink"
     },
     {
       "id": 3,
       "cardholderName": "Michael Johnson",
-      "cardNumber": "**** **** **** 9876",
+      "cardNumber": "6062 **** **** 9876",
       "expiryDate": "08/26",
-      "cvv": "789"
+      "cvv": "789",
+      "cardBgColor": "yellow"
     },
     {
       "id": 4,
       "cardholderName": "Emily Brown",
-      "cardNumber": "**** **** **** 4321",
+      "cardNumber": "3700 **** **** 4321",
       "expiryDate": "06/24",
-      "cvv": "234"
+      "cvv": "234",
+      "cardBgColor": "blue"
     },
     {
       "id": 5,
       "cardholderName": "William Davis",
-      "cardNumber": "**** **** **** 7890",
+      "cardNumber": "6250 **** **** 7890",
       "expiryDate": "02/23",
-      "cvv": "567"
+      "cvv": "567",
+      "cardBgColor": "purple"
+    },
+    {
+      "id": 6,
+      "cardholderName": "Linda Wilson",
+      "cardNumber": "5066 **** **** 2468",
+      "expiryDate": "11/28",
+      "cvv": "890",
+      "cardBgColor": "green"
+    },
+    {
+      "id": 7,
+      "cardholderName": "Robert White",
+      "cardNumber": "6011 **** **** 1357",
+      "expiryDate": "07/22",
+      "cvv": "123",
+      "cardBgColor": "orange"
+    },
+    {
+      "id": 8,
+      "cardholderName": "Karen Harris",
+      "cardNumber": "3600 **** **** 5793",
+      "expiryDate": "09/26",
+      "cvv": "456",
+      "cardBgColor": "teal"
+    },
+    {
+      "id": 9,
+      "cardholderName": "David Martinez",
+      "cardNumber": "3700 **** **** 8642",
+      "expiryDate": "04/23",
+      "cvv": "789",
+      "cardBgColor": "gray"
+    },
+    {
+      "id": 10,
+      "cardholderName": "Jennifer Taylor",
+      "cardNumber": "4111 **** **** 3141",
+      "expiryDate": "05/25",
+      "cvv": "234",
+      "cardBgColor": "red"
     }
   ]
 }
