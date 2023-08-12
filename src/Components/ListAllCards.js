@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
+import paymentCard from 'react-payment-card-component';
 
 const ListAllCards = () => {
   const [debitCards, setDebitCards] = useState([]);
@@ -22,11 +23,13 @@ const ListAllCards = () => {
       });
   }, []);
 
-  const handleCardClick = () => {
+  const handleCardClick = (cardId) => {
+    // Set the clicked card's ID in session storage
+    sessionStorage.setItem('selectedCardId', cardId);
+    alert("session id set");
+
     // Navigate to the CardDetails page
-    alert('Card Clicked navigating');
     navigate('/CardDetails');
-    
   };
 
   return (
@@ -35,7 +38,7 @@ const ListAllCards = () => {
       <Grid container spacing={3}>
         {debitCards.map(card => (
           <Grid item xs={12} sm={6} md={4} key={card.id}>
-            <Card onClick={handleCardClick} sx={{ cursor: 'pointer' }}>
+            <Card onClick={() => handleCardClick(card.id)} sx={{ cursor: 'pointer' }}>
               <CardContent>
                 <Typography variant="h6">{card.cardholderName}</Typography>
                 <Typography variant="body2" className="card-number">
@@ -48,7 +51,7 @@ const ListAllCards = () => {
                   CVV: {card.cvv}
                 </Typography>
               </CardContent>
-              <Button onClick={handleCardClick}>Details</Button>
+              <Button onClick={() => handleCardClick(card.id)}>Details</Button>
             </Card>
           </Grid>
         ))}
