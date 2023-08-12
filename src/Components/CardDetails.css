@@ -30,3 +30,6 @@
     /* Other input styling */
   }
   
+  ul{
+    list-style: none;
+  }

@@ -17,9 +17,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-        <Route path="/PaymentCard" element={<PaymentCard />} />
+        <Route index path="/" element={<PaymentCard />} />
           <Route path="/CardDetails/:id" element={<CardDetails />} /> {/* Pass ":id" as a parameter */}
-          <Route path="/" element={<ListAllCards />} />
+          {/* <Route path="/" element={<ListAllCards />} /> */}
 
           <Route
             path="/"
