@@ -1,0 +1,39 @@
+{
+  "debitCards": [
+    {
+      "id": 1,
+      "cardholderName": "John Doe",
+      "cardNumber": "**** **** **** 1234",
+      "expiryDate": "12/25",
+      "cvv": "123"
+    },
+    {
+      "id": 2,
+      "cardholderName": "Jane Smith",
+      "cardNumber": "**** **** **** 5678",
+      "expiryDate": "03/27",
+      "cvv": "456"
+    },
+    {
+      "id": 3,
+      "cardholderName": "Michael Johnson",
+      "cardNumber": "**** **** **** 9876",
+      "expiryDate": "08/26",
+      "cvv": "789"
+    },
+    {
+      "id": 4,
+      "cardholderName": "Emily Brown",
+      "cardNumber": "**** **** **** 4321",
+      "expiryDate": "06/24",
+      "cvv": "234"
+    },
+    {
+      "id": 5,
+      "cardholderName": "William Davis",
+      "cardNumber": "**** **** **** 7890",
+      "expiryDate": "02/23",
+      "cvv": "567"
+    }
+  ]
+}
