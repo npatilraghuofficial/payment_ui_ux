@@ -1,5 +1,3 @@
-// PaymentCard.js
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Card from 'react-credit-cards';
@@ -8,15 +6,18 @@ import { useNavigate } from 'react-router-dom';
 
 import './PaymentCard.css'; // Import the CSS file you created
 
-const CardWithMaskedNumber = ({ number, name, expiry, cvc, zIndex, link }) => {
+const CardWithMaskedNumber = ({ id,number, name, expiry, cvc, zIndex, link }) => {
   const navigate = useNavigate();
 
   const handleCardClick = () => {
+    
+    const selectedCardId = sessionStorage.setItem('selectedCardId', id);
+    // alert(selectedCardId);git 
     navigate(link); // Navigate to the specified link when the card is clicked
   };
 
   return (
-    <a href={link} className="card-link" onClick={handleCardClick}>
+    <form className="card-link" onClick={handleCardClick}>
       <Card
         number={number}
         name={name}
@@ -31,7 +32,7 @@ const CardWithMaskedNumber = ({ number, name, expiry, cvc, zIndex, link }) => {
           {'*'.repeat(12)}
         </div>
       </Card>
-    </a>
+    </form>
   );
 };
 
@@ -40,25 +41,13 @@ export default function App() {
   useEffect(() => {
     axios.get('http://localhost:9000/debitCards')
       .then(response => {
-        const updatedCards = response.data.reverse().map(card => ({
-          ...card,
-          isHovered: false,
-        }));
-        setDebitCards(updatedCards);
+        setDebitCards(response.data.reverse());
         console.log(response.data);
       })
       .catch(error => {
         console.error('Error fetching data:', error);
       });
   }, []);
-
-  const handleCardHover = index => {
-    const updatedCards = debitCards.map((card, i) => ({
-      ...card,
-      isHovered: i === index,
-    }));
-    setDebitCards(updatedCards);
-  };
 
   return (
     <div className="App">
@@ -67,10 +56,8 @@ export default function App() {
         {debitCards.map((card, index) => (
           <div
             key={index}
-            className={`card-item ${card.isHovered ? 'hovered' : ''}`}
+            className="card-item"
             style={{ zIndex: index + 1 }} // Increase the zIndex value
-            onMouseEnter={() => handleCardHover(index)}
-            onMouseLeave={() => handleCardHover(-1)}
           >
             <CardWithMaskedNumber
               number={card.cardNumber}
@@ -78,7 +65,8 @@ export default function App() {
               expiry={card.expiryDate}
               cvc={card.cvv}
               zIndex={index + 1}
-              link={`/CardDetails/${card.id}`} // Replace with the appropriate link
+              link={`/CardDetails/${card.id}`}
+            //   onClick ={sessionStorage.setItem('selectedCardId', card.id)}
             />
           </div>
         ))}
