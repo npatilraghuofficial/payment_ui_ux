@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CardDetails from './Components/CardDetails';
 import ListAllCards from './Components/ListAllCards';
 import PaymentCard from './Components/PaymentCard';
+import VisualGraph from './Components/Graphs/VisualGraph';
 
 function App() {
   const [showCardDetails, setShowCardDetails] = useState(false);
@@ -20,6 +21,7 @@ function App() {
         <Route index path="/" element={<PaymentCard />} />
           <Route path="/CardDetails/:id" element={<CardDetails />} /> {/* Pass ":id" as a parameter */}
           {/* <Route path="/" element={<ListAllCards />} /> */}
+          <Route  path="/VisualGraph" element={<VisualGraph />} />
 
           <Route
             path="/"

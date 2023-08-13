@@ -3,8 +3,15 @@ import { useParams } from "react-router-dom";
 import Card from "react-credit-cards";
 import { formatCreditCardNumber, formatCVC, formatExpirationDate, formatFormData } from "./utils";
 import "react-credit-cards/es/styles-compiled.css";
+import {row,col} from "react-bootstrap";
+
 
 import "./CardDetails.css";
+import MonthlySpendingGraph from "./Graphs/MonthlySpendingGraph";
+import PaymentHistoryGraph from "./Graphs/VisualGraph";
+import  MarchantCatGraph from "./Graphs/MarchantCatGraph";
+import VisualGraph from "./Graphs/VisualGraph";
+
 
 function CardDetails() {
   const { id } = useParams();
@@ -84,60 +91,46 @@ function CardDetails() {
           focused={false}
         />
         <div className="App-form">
+        <h2>Monthly Spending Pattern Graph:</h2>
+       
+        <div className="row">
+      <div className="col" >
+         <MonthlySpendingGraph monthlySpendingPattern={cardDetails.monthlySpendingPattern} />
          
+            <VisualGraph
+              averageTransactionAmount={cardDetails.averageTransactionAmount}
+              highestTransactionAmount={cardDetails.highestTransactionAmount}
+              lowestTransactionAmount={cardDetails.lowestTransactionAmount}
+              transactionSuccessRate={cardDetails.transactionSuccessRate}
+              availableCredit={cardDetails.availableCredit}
+            />
+            {/* <MarchantCatGraph merchantCategories={cardDetails.merchantCategories} /> */}
+          
+          </div>
+          <h2>Merchant Categories:</h2>
           <ul>
+            {cardDetails.merchantCategories.map((category, index) => (
+              <li key={index}>{category}</li>
+            ))}
+          </ul> 
+
+      <ul>
             <li>averageTransactionAmount :  {cardDetails.averageTransactionAmount}      </li>
           </ul>
-          <li>Average Transaction Amount: {cardDetails.averageTransactionAmount}</li>
-            <li>Highest Transaction Amount: {cardDetails.highestTransactionAmount}</li>
-            <li>Lowest Transaction Amount: {cardDetails.lowestTransactionAmount}</li>
+     
+    </div>
+
+        
+ 
+  {/* <PaymentHistoryGraph paymentHistory={cardDetails.paymentHistory} /> */}
+       
             <li>Foreign Transaction Count: {cardDetails.foreignTransactionCount}</li>
             <li>Is Expired: {cardDetails.isExpired ? "Yes" : "No"}</li>
             <li>Transaction Success Rate: {cardDetails.transactionSuccessRate}</li>
             <li>Payment Method: {cardDetails.paymentMethod}</li>
             <li>Available Credit: {cardDetails.availableCredit}</li>
             <li>Monthly Payment Amount: {cardDetails.monthlyPaymentAmount}</li>
-
-
-
-            <h2>Merchant Categories:</h2>
-          <ul>
-            {cardDetails.merchantCategories.map((category, index) => (
-              <li key={index}>{category}</li>
-            ))}
-          </ul>
-          <h2>Monthly Spending Pattern:</h2>
-          <ul>
-            {Object.entries(cardDetails.monthlySpendingPattern).map(([month, amount], index) => (
-              <li key={index}>{month}: {amount}</li>
-            ))}
-          </ul>
-          <h2>Transaction Locations:</h2>
-          <ul>
-            {cardDetails.transactionLocations.map((location, index) => (
-              <li key={index}>Lat: {location.lat}, Lng: {location.lng}</li>
-            ))}
-          </ul>
-          <h2>Merchant Categories:</h2>
-          <ul>
-            {cardDetails.merchantCategories.map((category, index) => (
-              <li key={index}>{category}</li>
-            ))}
-          </ul>
-          <h2>Monthly Spending Pattern:</h2>
-          <ul>
-            {Object.entries(cardDetails.monthlySpendingPattern).map(([month, amount], index) => (
-              <li key={index}>{month}: {amount}</li>
-            ))}
-          </ul>
-          {/* <h2>Transaction Locations:</h2>
-          <ul>
-            {cardDetails.transactionLocations.map((location, index) => (
-              <li key={index}>Lat: {location.lat}, Lng: {location.lng}</li>
-            ))}
-          </ul> */}
-
-
+<br/>
           </div>
         <hr style={{ margin: "60px 0 30px" }} />
         {/* Rest of the content */}
