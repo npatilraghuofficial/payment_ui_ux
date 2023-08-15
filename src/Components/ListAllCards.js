@@ -13,7 +13,7 @@ const ListAllCards = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:9000/debitCards')
+    axios.get('https://credit-card-gvu3.onrender.com/debitCards')
       .then(response => {
         setDebitCards(response.data);
       })

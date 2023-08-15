@@ -41,7 +41,8 @@ function CardDetails() {
   useEffect(() => {
     const currentId = sessionStorage.getItem("currentId");
     // const curentId = 1;
-    fetch(`http://localhost:9000/debitCards/${currentId}`)
+    // const url = "https://credit-card-gvu3.onrender.com/debitCards";
+    fetch(`https://credit-card-gvu3.onrender.com/debitCards/${currentId}`)
       .then(response => response.json())
       .then(data => {
         const fetchedCardDetails = {

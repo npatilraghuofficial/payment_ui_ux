@@ -1,0 +1,394 @@
+{
+  "debitCards": [
+    {
+      "id": 1,
+      "cardholderName": "John Doe",
+      "cardNumber": "5555 1111 1111 1234",
+      "expiryDate": "12/25",
+      "cvv": "123",
+      "cardBgColor": "blood",
+      "averageTransactionAmount": 150.5,
+      "highestTransactionAmount": 500,
+      "lowestTransactionAmount": 20,
+      "monthlySpendingPattern": {
+        "January": 300,
+        "February": 250,
+        "March": 180
+      },
+      "transactionLocations": [
+        { "lat": 40.7128, "lng": -74.0060 },
+        { "lat": 34.0522, "lng": -118.2437 },
+        { "lat": 51.5074, "lng": -0.1278 }
+      ],
+      "transactionTimestamps": [
+        "2023-01-05",
+        "2023-02-15",
+        "2023-03-20"
+      ],
+      "foreignTransactionCount": 8,
+      "isExpired": false,
+      "merchantCategories": ["Retail", "Restaurant", "Online Shopping"],
+      "transactionSuccessRate": 0.95,
+      "paymentMethod": "Chip",
+      "availableCredit": 2500,
+      "monthlyPaymentAmount": 150,
+      "paymentHistory": {
+        "2023-01": "On Time",
+        "2023-02": "On Time",
+        "2023-03": "Late"
+      },
+      "notificationPreferences": ["Email", "App"]
+    },
+    {
+      "id": 2,
+      "cardholderName": "Jane Smith",
+      "cardNumber": "4017 4568 8714 5678",
+      "expiryDate": "03/27",
+      "cvv": "456",
+      "cardBgColor": "pink",
+      "averageTransactionAmount": 120.75,
+      "highestTransactionAmount": 300,
+      "lowestTransactionAmount": 10,
+      "monthlySpendingPattern": {
+        "January": 150,
+        "February": 200,
+        "March": 180
+      },
+      "transactionLocations": [
+        { "lat": 34.0522, "lng": -118.2437 },
+        { "lat": 51.5074, "lng": -0.1278 },
+        { "lat": 48.8566, "lng": 2.3522 }
+      ],
+      "transactionTimestamps": [
+        "2023-01-10",
+        "2023-02-20",
+        "2023-03-25"
+      ],
+      "foreignTransactionCount": 5,
+      "isExpired": false,
+      "merchantCategories": ["Restaurant", "Grocery", "Travel"],
+      "transactionSuccessRate": 0.92,
+      "paymentMethod": "Contactless",
+      "availableCredit": 1800,
+      "monthlyPaymentAmount": 120,
+      "paymentHistory": {
+        "2023-01": "On Time",
+        "2023-02": "Late",
+        "2023-03": "On Time"
+      },
+      "notificationPreferences": ["SMS"]
+    },
+    {
+      "id": 3,
+      "cardholderName": "Michael Johnson",
+      "cardNumber": "6062 4568 8735 9876",
+      "expiryDate": "08/26",
+      "cvv": "789",
+      "cardBgColor": "yellow",
+      "averageTransactionAmount": 80.25,
+      "highestTransactionAmount": 200,
+      "lowestTransactionAmount": 5,
+      "monthlySpendingPattern": {
+        "January": 100,
+        "February": 120,
+        "March": 90
+      },
+      "transactionLocations": [
+        { "lat": 51.5074, "lng": -0.1278 },
+        { "lat": 48.8566, "lng": 2.3522 },
+        { "lat": 37.7749, "lng": -122.4194 }
+      ],
+      "transactionTimestamps": [
+        "2023-01-15",
+        "2023-02-10",
+        "2023-03-18"
+      ],
+      "foreignTransactionCount": 3,
+      "isExpired": false,
+      "merchantCategories": ["Grocery", "Gas Station", "Entertainment"],
+      "transactionSuccessRate": 0.88,
+      "paymentMethod": "Swipe",
+      "availableCredit": 1000,
+      "monthlyPaymentAmount": 80,
+      "paymentHistory": {
+        "2023-01": "Late",
+        "2023-02": "On Time",
+        "2023-03": "On Time"
+      },
+      "notificationPreferences": ["Email"]
+    },
+    {
+      "id": 4,
+      "cardholderName": "Emily Brown",
+      "cardNumber": "3700 4568 8145 4321",
+      "expiryDate": "06/24",
+      "cvv": "234",
+      "cardBgColor": "blue",
+      "averageTransactionAmount": 65.0,
+      "highestTransactionAmount": 150,
+      "lowestTransactionAmount": 5,
+      "monthlySpendingPattern": {
+        "January": 80,
+        "February": 100,
+        "March": 75
+      },
+      "transactionLocations": [
+        { "lat": 48.8566, "lng": 2.3522 },
+        { "lat": 37.7749, "lng": -122.4194 },
+        { "lat": 34.0522, "lng": -118.2437 }
+      ],
+      "transactionTimestamps": [
+        "2023-01-20",
+        "2023-02-05",
+        "2023-03-12"
+      ],
+      "foreignTransactionCount": 2,
+      "isExpired": false,
+      "merchantCategories": ["Gas Station", "Retail", "Online Shopping"],
+      "transactionSuccessRate": 0.94,
+      "paymentMethod": "Swipe",
+      "availableCredit": 800,
+      "monthlyPaymentAmount": 65,
+      "paymentHistory": {
+        "2023-01": "On Time",
+        "2023-02": "Late",
+        "2023-03": "On Time"
+      },
+      "notificationPreferences": ["App"]
+    },
+    {
+      "id": 5,
+      "cardholderName": "William Davis",
+      "cardNumber": "6250 4568 7145 7890",
+      "expiryDate": "02/23",
+      "cvv": "567",
+      "cardBgColor": "purple",
+      "averageTransactionAmount": 200.0,
+      "highestTransactionAmount": 600,
+      "lowestTransactionAmount": 20,
+      "monthlySpendingPattern": {
+        "January": 250,
+        "February": 300,
+        "March": 180
+      },
+      "transactionLocations": [
+        { "lat": 37.7749, "lng": -122.4194 },
+        { "lat": 34.0522, "lng": -118.2437 },
+        { "lat": 40.7128, "lng": -74.0060 }
+      ],
+      "transactionTimestamps": [
+        "2023-01-25",
+        "2023-02-15",
+        "2023-03-30"
+      ],
+      "foreignTransactionCount": 4,
+      "isExpired": false,
+      "merchantCategories": ["Retail", "Entertainment", "Travel"],
+      "transactionSuccessRate": 0.96,
+      "paymentMethod": "Contactless",
+      "availableCredit": 3000,
+      "monthlyPaymentAmount": 200,
+      "paymentHistory": {
+        "2023-01": "On Time",
+        "2023-02": "On Time",
+        "2023-03": "On Time"
+      },
+      "notificationPreferences": ["Email", "SMS"]
+    },
+    {
+      "id": 6,
+      "cardholderName": "Linda Wilson",
+      "cardNumber": "5066 4568 8145 2468",
+      "expiryDate": "11/28",
+      "cvv": "890",
+      "cardBgColor": "green",
+      "averageTransactionAmount": 90.0,
+      "highestTransactionAmount": 180,
+      "lowestTransactionAmount": 10,
+      "monthlySpendingPattern": {
+        "January": 120,
+        "February": 90,
+        "March": 100
+      },
+      "transactionLocations": [
+        { "lat": 34.0522, "lng": -118.2437 },
+        { "lat": 40.7128, "lng": -74.0060 },
+        { "lat": 51.5074, "lng": -0.1278 }
+      ],
+      "transactionTimestamps": [
+        "2023-01-08",
+        "2023-02-18",
+        "2023-03-27"
+      ],
+      "foreignTransactionCount": 1,
+      "isExpired": false,
+      "merchantCategories": ["Grocery", "Restaurant", "Entertainment"],
+      "transactionSuccessRate": 0.98,
+      "paymentMethod": "Contactless",
+      "availableCredit": 1200,
+      "monthlyPaymentAmount": 90,
+      "paymentHistory": {
+        "2023-01": "On Time",
+        "2023-02": "On Time",
+        "2023-03": "On Time"
+      },
+      "notificationPreferences": ["App"]
+    },
+    {
+      "id": 7,
+      "cardholderName": "Robert White",
+      "cardNumber": "6011 4568 8745 1357",
+      "expiryDate": "07/22",
+      "cvv": "123",
+      "cardBgColor": "orange",
+      "averageTransactionAmount": 70.0,
+      "highestTransactionAmount": 120,
+      "lowestTransactionAmount": 10,
+      "monthlySpendingPattern": {
+        "January": 90,
+        "February": 80,
+        "March": 70
+      },
+      "transactionLocations": [
+        { "lat": 51.5074, "lng": -0.1278 },
+        { "lat": 48.8566, "lng": 2.3522 },
+        { "lat": 37.7749, "lng": -122.4194 }
+      ],
+      "transactionTimestamps": [
+        "2023-01-12",
+        "2023-02-22",
+        "2023-03-29"
+      ],
+      "foreignTransactionCount": 0,
+      "isExpired": false,
+      "merchantCategories": ["Restaurant", "Gas Station", "Online Shopping"],
+      "transactionSuccessRate": 0.99,
+      "paymentMethod": "Swipe",
+      "availableCredit": 900,
+      "monthlyPaymentAmount": 70,
+      "paymentHistory": {
+        "2023-01": "On Time",
+        "2023-02": "On Time",
+        "2023-03": "On Time"
+      },
+      "notificationPreferences": ["Email", "SMS"]
+    },
+    {
+      "id": 8,
+      "cardholderName": "Karen Harris",
+      "cardNumber": "3600 4568 8714 5793",
+      "expiryDate": "09/26",
+      "cvv": "456",
+      "cardBgColor": "teal",
+      "averageTransactionAmount": 110.0,
+      "highestTransactionAmount": 250,
+      "lowestTransactionAmount": 10,
+      "monthlySpendingPattern": {
+        "January": 140,
+        "February": 130,
+        "March": 100
+      },
+      "transactionLocations": [
+        { "lat": 37.7749, "lng": -122.4194 },
+        { "lat": 34.0522, "lng": -118.2437 },
+        { "lat": 40.7128, "lng": -74.0060 }
+      ],
+      "transactionTimestamps": [
+        "2023-01-18",
+        "2023-02-28",
+        "2023-03-15"
+      ],
+      "foreignTransactionCount": 2,
+      "isExpired": false,
+      "merchantCategories": ["Grocery", "Retail", "Entertainment"],
+      "transactionSuccessRate": 0.97,
+      "paymentMethod": "Chip",
+      "availableCredit": 1500,
+      "monthlyPaymentAmount": 110,
+      "paymentHistory": {
+        "2023-01": "On Time",
+        "2023-02": "On Time",
+        "2023-03": "Late"
+      },
+      "notificationPreferences": ["Email", "App"]
+    },
+    {
+      "id": 9,
+      "cardholderName": "David Martinez",
+      "cardNumber": "3700 4568 8714 8642",
+      "expiryDate": "04/23",
+      "cvv": "789",
+      "cardBgColor": "gray",
+      "averageTransactionAmount": 45.0,
+      "highestTransactionAmount": 100,
+      "lowestTransactionAmount": 5,
+      "monthlySpendingPattern": {
+        "January": 60,
+        "February": 50,
+        "March": 40
+      },
+      "transactionLocations": [
+        { "lat": 40.7128, "lng": -74.0060 },
+        { "lat": 51.5074, "lng": -0.1278 },
+        { "lat": 48.8566, "lng": 2.3522 }
+      ],
+      "transactionTimestamps": [
+        "2023-01-22",
+        "2023-02-10",
+        "2023-03-20"
+      ],
+      "foreignTransactionCount": 1,
+      "isExpired": false,
+      "merchantCategories": ["Gas Station", "Restaurant", "Grocery"],
+      "transactionSuccessRate": 0.93,
+      "paymentMethod": "Swipe",
+      "availableCredit": 700,
+      "monthlyPaymentAmount": 45,
+      "paymentHistory": {
+        "2023-01": "On Time",
+        "2023-02": "Late",
+        "2023-03": "On Time"
+      },
+      "notificationPreferences": ["SMS"]
+    },
+    {
+      "id": 10,
+      "cardholderName": "Jennifer Taylor",
+      "cardNumber": "4111 4568 8714 3141",
+      "expiryDate": "05/25",
+      "cvv": "234",
+      "cardBgColor": "red",
+      "averageTransactionAmount": 180.0,
+      "highestTransactionAmount": 400,
+      "lowestTransactionAmount": 50,
+      "monthlySpendingPattern": {
+        "January": 220,
+        "February": 180,
+        "March": 250
+      },
+      "transactionLocations": [
+        { "lat": 51.5074, "lng": -0.1278 },
+        { "lat": 48.8566, "lng": 2.3522 },
+        { "lat": 37.7749, "lng": -122.4194 }
+      ],
+      "transactionTimestamps": [
+        "2023-01-28",
+        "2023-02-12",
+        "2023-03-18"
+      ],
+      "foreignTransactionCount": 3,
+      "isExpired": false,
+      "merchantCategories": ["Retail", "Entertainment", "Travel"],
+      "transactionSuccessRate": 0.95,
+      "paymentMethod": "Contactless",
+      "availableCredit": 2000,
+      "monthlyPaymentAmount": 180,
+      "paymentHistory": {
+        "2023-01": "On Time",
+        "2023-02": "Late",
+        "2023-03": "On Time"
+      },
+      "notificationPreferences": ["Email"]
+    }
+  ]
+}

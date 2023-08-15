@@ -157,6 +157,12 @@
  
 }
 
+.overlay {
+  /* Other overlay styles */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
 /* PaymentCard.css */
 .popup-overlay {
   position: relative;
@@ -217,7 +223,12 @@
   z-index: 100; /* Ensure the modal is above other content */
 
   transition: opacity 0.3s, visibility 0.3s;
+  
 
+}
+.custom-modal.closing {
+  opacity: 0;
+  transform: translateY(-20px); /* Adjust this value to control the exit animation */
 }
 
 .modal-content {

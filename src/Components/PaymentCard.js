@@ -40,7 +40,8 @@ const PaymentCard = () => {
 
  
   useEffect(() => {
-      axios.get('http://localhost:9000/debitCards')
+    
+      axios.get('https://credit-card-gvu3.onrender.com/debitCards')
       .then(response => {
         setDebitCards(response.data.reverse());
         setLoading(false);
@@ -75,10 +76,11 @@ const PaymentCard = () => {
 
   const closeDialog = () => {
     setShowModal(false);
-    setShowOverlay(false); // Hide the overlay when popup closes
-
     document.body.style.overflow = 'auto'; // Allow background scrolling
-
+  
+    setTimeout(() => {
+      setShowOverlay(false); // Hide the overlay after the modal has started closing
+    }, 300); // Adjust this time to match your transition duration
   };
 
   useEffect(() => {
@@ -122,7 +124,7 @@ const PaymentCard = () => {
   return (
     <div className="App"  >
       <h1>React Credit Cards Analysis (LazyLoading)</h1>
-      <div className="card-list" ref={scrollRef}>
+      <div className="card-list"  ref={scrollRef}>
         {loading ? (
           <div>Loading...</div>
         ) : (
@@ -148,15 +150,17 @@ const PaymentCard = () => {
       </div>
       {showModal && (
        <>
-       <div className="overlay" style={{ display: showOverlay ? 'block' : 'none' }}></div>
-          <div className="custom-modal" ref={modalRef}>
-            <div className="modal-content">
-              <CardDetails id={selectedCardId} />
-              <button className="close-button" onClick={closeDialog}>
-                Close
-              </button>
-            </div>
-          </div>
+         <>
+    <div className={`overlay ${showOverlay ? 'show' : ''}`} />
+    <div className={`custom-modal ${showModal ? 'show' : ''}`} onMouseLeave={closeDialog} ref={modalRef}>
+      <div className="modal-content">
+        <CardDetails id={selectedCardId} />
+        <button className="close-button" onClick={closeDialog}>
+          Close
+        </button>
+      </div>
+    </div>
+  </>
           </>
       )}
     </div>
